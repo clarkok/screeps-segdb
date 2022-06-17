@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "target": "ES2016",
+        "module": "UMD",
+        "downlevelIteration": true,
+        "moduleResolution": "Node",
+        "outDir": "dist",
+        "incremental": true,
+
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictBindCallApply": true,
+        "strictPropertyInitialization": true,
+        "noImplicitThis": true,
+        "alwaysStrict": true,
+
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+
+        "esModuleInterop": true,
+        "allowUmdGlobalAccess": true,
+        "allowJs": true,
+
+        "forceConsistentCasingInFileNames": true
+    },
+
+    "include": [
+        "src/**/*.ts",
+        "test/**/*.ts"
+    ]
+}
