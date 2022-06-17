@@ -1,10 +1,10 @@
 # SegDB
 
-The SegDB is a key-value database designed for the programming MMORTS game [Screeps](https://screeps.com/). It can
-utilize the segments provided by the game, to gain access to the extra 10MB memory space. The database stores key-value
-pairs in strings across multiple segments, so you, as the user don't need to worry about the size limitation of
-individual segments. The database provides `get`, `set` and `delete` to operate a single key, and a few `list` methods
-to list a set of key-value pairs in lexicographical order.
+The SegDB is a key-value database designed for the programming MMORTS game [Screeps: World](https://screeps.com/). It
+can utilize the segments provided by the game, to gain access to the extra 10MB memory space. The database stores
+key-value pairs in strings across multiple segments, so you, as the user don't need to worry about the size limitation
+of individual segments. The database provides `get`, `set` and `delete` to operate a single key, and a few `list`
+methods to list a set of key-value pairs in lexicographical order.
 
 ## Usage
 
