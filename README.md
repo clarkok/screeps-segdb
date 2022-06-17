@@ -9,8 +9,8 @@ methods to list a set of key-value pairs in lexicographical order.
 ## Usage
 
 If you use TypeScript, you can grab the `segdb.ts` and `append_merge_segment.ts` from the `src` folder to your codebase
-and import them. If you use JavaScript, you can turn to the `segdb.js` and `append_merge_segment.js` under the `dist`
-folder.
+and import them. If you use JavaScript, you can turn to the `segdb.js` and `append_merge_segment.js` under the
+`dist/src` folder.
 
 ### Setup
 
