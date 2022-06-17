@@ -328,7 +328,12 @@
             return true;
         }
         /** query the minimal write quota in this tick */
-        minimumUpdateRequirement() {
+        minimumWriteQuota() {
+            var _a;
+            return ((_a = this.writing) === null || _a === void 0 ? void 0 : _a.deltaSize) ? 1 : 0;
+        }
+        /** query the suggested write quota in this tick */
+        suggestedWriteQuota() {
             var _a;
             return ((((_a = this.writing) === null || _a === void 0 ? void 0 : _a.deltaSize) ? 1 : 0) +
                 (this.checkpoint !== null ? 1 : 0) +

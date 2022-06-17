@@ -421,7 +421,12 @@ export class SegDB {
     }
 
     /** query the minimal write quota in this tick */
-    minimumUpdateRequirement(): number {
+    minimumWriteQuota(): number {
+        return this.writing?.deltaSize ? 1 : 0;
+    }
+
+    /** query the suggested write quota in this tick */
+    suggestedWriteQuota(): number {
         return (
             (this.writing?.deltaSize ? 1 : 0) +
             (this.checkpoint !== null ? 1 : 0) +

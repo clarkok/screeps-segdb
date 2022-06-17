@@ -20,8 +20,8 @@ to use exclusively. Then on every tick, you should call `tickStart()` at conveni
 pending read requests if their hosting segment got loaded. And lastly, you should call `tickAfter()` so the database can
 finish its housekeeping work. If you make any update to the database in this tick, you'd better to reserve at least 1
 write quota for the database. The database can work if you don't give it any write quota, but if the global reset
-happens right on this tick, you may lose some changes. You can use `minimumUpdateRequirement()` to query the suggested
-write quota value.
+happens right on this tick, you may lose some changes. You can use `minimumWriteQuota()` to query the minimum write
+quota or `suggtestedWriteQuota` for the suggested one.
 
 **Note**
 The SegDB would use a few kilo-bytes vanilla Memory to store some metadata. The memory path is hardcoded as
@@ -369,7 +369,10 @@ export class SegDB {
     requestCompact();
 
     /** query the minimal write quota in this tick */
-    minimumUpdateRequirement(): number;
+    minimumWriteQuota(): number;
+
+    /** query the suggested write quota in this tick */
+    suggestedWriteQuota(): number;
 
     /**
      * List a range of keys
